@@ -4,7 +4,7 @@
 int main(){
     int t;
     std::cin >> t;
-    for (t; t >= 0; t--){
+    for (t; t > 0; t--){
         std::string s;
         while (t > 0){
             t--;
