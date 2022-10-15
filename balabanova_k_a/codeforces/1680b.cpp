@@ -4,7 +4,7 @@
 int main(){
     int t;
     std::cin >> t;
-    for (t; t >= 0; t--){
+    for (t; t > 0; t--){
       int m, n;
       std::cin >> n >> m;
       std::vector < std::vector <char> > arr(n, std::vector <char> (m) );
