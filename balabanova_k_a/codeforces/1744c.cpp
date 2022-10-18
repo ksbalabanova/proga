@@ -7,16 +7,15 @@ int main() {
     for (t; t > 0; t--) {
         int n;
         char c;
-        int count = 0;
         std::cin >> n >> c;
-        std::string s = "";
+        std::string s;
         std::cin >> s;
         std::string twos = s + s;
-        int max = - 1;
-        for (int i = 0; i < twos.length(); i++) {
+        int max = -100;
+        for (int i = 0; i < twos.size(); i++) {
             int delta = 0;
-            if (s[i] == c) {
-                while (s[i + delta] != 'g') {
+            if (twos[i] == c) {
+                while (twos[i + delta] != 'g' && (i + delta) < twos.size()) {
                     delta++;
                 }
             }
@@ -24,6 +23,6 @@ int main() {
                 max = delta;
             }
         }
-        std::cout << max;
+        std::cout << max << std::endl;
     }
 }
