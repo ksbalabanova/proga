@@ -14,7 +14,8 @@ int main() {
         std::vector <int> tm;
         tm.resize(n);
         for (int i = 0; i < n; i++) {
-            std::cin >> a[i] >> b[i];
+            std::cin >> a[i];
+            std::cin >> b[i];
         }
         for (int i = 0; i < n; i++) {
             std::cin >> tm[i];
