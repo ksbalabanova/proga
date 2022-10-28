@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-//почему не видно значений m1, m2
 
 int main() {
     int t;
@@ -8,13 +7,13 @@ int main() {
     for (t; t > 0; t--) {
         int n;
         std::cin >> n;
-        std::vector <int> arr{0};
+        std::vector <int> arr;
         arr.resize(n);
         int m1 = 0, m2 = 0;
         for (int i = 0; i < n; i++) {
             std::cin >> arr[i];
         }
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             if (arr[i] > m1) {
                 m1 = arr[i];
             }
@@ -30,16 +29,16 @@ int main() {
             }
             else {
                 for (int j = 0; j < n; j++) {
-                    if (arr[i] == arr[j] && i != j){
+                    if (arr[i] == arr[j] && i != j) {
                         ans = n;
-                     }
-                     else {
-                        ans = n + std::abs(m1 - m2);
+                    }
+                    else {
+                        ans = (m1 - m2) + 1;
                     }
                 }
             }
         }
         std::cout << ans << std::endl;
     }
-  return 0;
+    return 0;
 }
