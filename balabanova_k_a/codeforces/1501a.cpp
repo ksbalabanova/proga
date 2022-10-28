@@ -8,8 +8,11 @@ int main() {
         int n;
         std::cin >> n;
         std::vector <int> a;
+        a.resize(n);
         std::vector <int> b;
+        b.resize(n);
         std::vector <int> tm;
+        tm.resize(n);
         for (int i = 0; i < n; i++) {
             std::cin >> a[i] >> b[i];
         }
