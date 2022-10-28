@@ -14,9 +14,6 @@ int main() {
         for (int i = 0; i < n; i++) {
             std::cin >> arr[i];
         }
-        for (int i = 0; i < n; i++) {
-            std::cin >> arr[i];
-        }
         for(int i = 0; i < n; i++){
             if (arr[i] > m1) {
                 m1 = arr[i];
