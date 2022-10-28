@@ -8,6 +8,7 @@ int main() {
         int n;
         std::cin >> n;
         std::vector <int> a{ 0 };
+        a.resize(n);
         for (int i = 1; i < n + 1; i++) {//ввели массив
             std::cin >> a[i];
         }
