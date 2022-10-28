@@ -9,6 +9,7 @@ int main() {
         int n;
         std::cin >> n;
         std::vector <int> arr{0};
+        arr.resize(n);
         int m1 = 0, m2 = 0;
         for (int i = 0; i < n; i++) {
             std::cin >> arr[i];
@@ -41,7 +42,7 @@ int main() {
                 }
             }
         }
-        std::cout << ans;
+        std::cout << ans << std::endl;
     }
   return 0;
 }
