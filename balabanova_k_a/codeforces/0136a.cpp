@@ -5,7 +5,9 @@ int main(){
   int n;
   std::cin >> n;
   std::vector <int> ktokomy {0};
+ ktokomy.resize(n);
   std::vector <int> ktoot {0};
+ ktoot.resize(n);
   for (int i = 1; i < n + 1; i++){
     std::cin >> ktokomy[i];
   }
