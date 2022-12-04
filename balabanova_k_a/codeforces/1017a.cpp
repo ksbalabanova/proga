@@ -24,14 +24,7 @@ int main() {
     }
     tmp = ave[0];
     int ans = 0;
-    //for (int i = 0; i < n; i++) {
-    //    std::cout << "ave: " << ave[i] << ' ';
-    //}
-    //std::cout << "tmp: " << tmp << std::endl;
     std::sort(ave.begin(), ave.end());
-    //for (int i = 0; i < n; i++) {
-    //    std::cout << "ave: " << ave[i] << ' ';
-    //}
     for (int i = n - 1; i >= 0; i--) {
         if (ave[i] == tmp) {
             ans = n - i;
