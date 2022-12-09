@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main() {
     int t;
@@ -9,34 +10,27 @@ int main() {
         std::cin >> n;
         std::vector <int> arr;
         arr.resize(n);
-        int m1 = 0, m2 = 0;
+        int count_0 = 0;
         for (int i = 0; i < n; i++) {
             std::cin >> arr[i];
-        }
-        for (int i = 0; i < n; i++) {
-            if (arr[i] > m1) {
-                m1 = arr[i];
-            }
-            if (arr[i] > m2 && arr[i] < m1) {
-                m2 = arr[i];
-            }
-        }
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
             if (arr[i] == 0) {
-                ans = n - 1;
-                break;
+                count_0++;
             }
-            else {
-                for (int j = 0; j < n; j++) {
-                    if (arr[i] == arr[j] && i != j) {
-                        ans = n;
-                    }
-                    else {
-                        ans = (m1 - m2) + 1;
-                    }
-                }
+        }
+        int tmp = 0;
+        int ans = 0;
+        if (count_0 != 0) {
+            ans = n - count_0;
+        }
+        std::sort(arr.begin(), arr.end());
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] == arr[i + 1] && count_0 == 0) {
+                ans = n;
+                tmp = 1;
             }
+        }
+        if (tmp == 0 && count_0 == 0) {
+            ans = n + 1;
         }
         std::cout << ans << std::endl;
     }
