@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+//не проходит по времени, работает правильно
 int main() {
     int t;
     std::cin >> t;
