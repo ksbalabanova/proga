@@ -6,11 +6,11 @@ int main() {
     std::cin.tie(0);
 
     int t, a, n, i;
-    int max = 0;
     std::string s;
     char tmp;
     std::cin >> t;
     for (t; t > 0; t--) {
+        int max = 0;
         std::cin >> a >> s >> n;
         std::set <char> set_0;
         int k = 0;
